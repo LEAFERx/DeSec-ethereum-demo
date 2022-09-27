@@ -9,9 +9,8 @@ contract FriendlyBet {
     uint256 public betAmount;
     bool completedBet;
 
-    // When 'VendingMachine' contract is deployed:
-    // 1. set the deploying address as the owner of the contract
-    // 2. set the deployed smart contract's cupcake balance to 100
+    // When 'FriendlyBet' contract is deployed, set the addresses of the two parties (can be specified as arguments)
+    // and initialize state variables.
     constructor() {
         party1 = payable(0xEd81c1feb82cE8eD831b07b3338627FaF67576A8); // Zhe
         party2 = payable(0xEbaB521a59c292CD0D84b50fB5dA408a8eD45363); // Akshit
@@ -27,7 +26,7 @@ contract FriendlyBet {
     }
 
     function executeBet() public {
-        bool eventHappened = true;
+        bool eventHappened = true; // replace this with an oracle API query
         address payable winner = eventHappened ? party1 : party2;
         uint256 winningAmount = 2 * betAmount;
         winner.transfer(winningAmount);
