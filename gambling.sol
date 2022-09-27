@@ -40,7 +40,7 @@ contract FriendlyBet {
         uint256 maxTemperature = apiConsumer.getTemperature();
         address payable winner = maxTemperature > betTemperatureThreshold ? party1: party2;
         uint256 winningAmount = 2 * betAmount;
-        winner.transfer(winningAmount);
+        winner.transfer(winningAmount * 0.001 ether);
         completedBet = true;
     }
 }
