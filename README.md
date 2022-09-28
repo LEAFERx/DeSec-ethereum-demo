@@ -6,9 +6,11 @@
 npm install
 ```
 
-Create `.env` according to `.env.example` (Deployer is also party one).
+Create `.env` according to `.env.example` (Deployer is also party1).
 
-Get tokens from faucet.
+Get tokens from [faucet](https://faucets.chain.link) using Metamask (for Goerli testnet).
+
+Get API keys from [Alchemy](https://www.alchemy.com) and [Etherscan](https://etherscan.io).
 
 ## Deploy
 
